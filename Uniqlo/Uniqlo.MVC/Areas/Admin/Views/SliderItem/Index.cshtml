@@ -1,0 +1,53 @@
+﻿@using Uniqlo.DAL.Models;
+@model List<SliderItem>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary"><span style="font-size: 2em; "> Slider Items </span> <span class="float-right"><a type="button" class="btn btn-success" asp-area="Admin" asp-controller="SliderItem" asp-action="Create">Create Slider</a></span>  <span class="float-right"><a type="button" class="btn btn-warning mr-3" asp-area="Admin" asp-controller="SliderItem" asp-action="Trash">Trash <i class="fa-solid fa-trash"></i></a></span></h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive" style="position: relative; left: 100px;">
+            <table class="table table-bordered" style="width: 85%;" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Button Url</th>
+                        <th>Image</th>
+                        <th>Configures</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Button Url</th>
+                        <th>Image</th>
+                        <th>Configures</th>
+                    </tr>
+                </tfoot>
+                @if (Model != null && Model.Any())
+                {
+                    <tbody>
+                        @foreach (SliderItem item in Model)
+                        {
+                            <tr>
+                                <td><span style="position: relative; top: 18px;">@item.Id</span> <a type="button" class="btn btn-secondary" style="position: relative; top: 18px; left: 15px;" asp-area="Admin" asp-action="Details" asp-controller="SliderItem" asp-route-Id="@item.Id"><i class="fa-solid fa-circle-info"></i></a></td>
+                                <td><span style="position: relative; top: 28px;">@item.Title</span></td>
+                                <td><span style="position: relative; top: 28px;">@item.ButtonUrl</span></td>
+                                <td><img src="~/upload/sliderItems/@item.ImageUrl" style="width: 80px; height: 80px;border-radius: 30px; position: relative; left: 18px;"></td>
+                                <td><a type="button" class="btn btn-primary mt-3 ml-5 mr-3" asp-area="Admin" asp-action="Update" asp-controller="SliderItem" asp-route-Id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> <a type="button" class="btn btn-warning mt-3 mr-3" asp-area="Admin" asp-action="SoftDelete" asp-controller="SliderItem" asp-route-Id="@item.Id"><i class="fa-sharp fa-solid fa-trash"></i></a> <a type="button" class="btn btn-danger mt-3" asp-area="Admin" asp-action="Delete" asp-controller="SliderItem" asp-route-Id="@item.Id"><i class="fa-solid fa-delete-left"></i></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                }
+                else
+                {
+                    <h3>No Services Found</h3>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- /.container-fluid -->

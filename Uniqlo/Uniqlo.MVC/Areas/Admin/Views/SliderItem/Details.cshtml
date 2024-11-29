@@ -1,0 +1,49 @@
+﻿@using Uniqlo.DAL.Models;
+@model SliderItem
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary"><span style="font-size: 2em; ">Slider - Details </span> <span class="float-right"><a type="button" class="btn btn-outline-dark" asp-area="Admin" asp-controller="SliderItem" asp-action="Index"><i class="fa-solid fa-circle-arrow-left"></i> Go Back</a> </span></h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive" style="position: relative; left: 100px;">
+            <table class="table table-bordered" style="width: 85%;" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Button Url</th>
+                        <th>Image</th>
+                        <th>Created Date</th>
+                        <th>Modified Date</th>
+                        <th>Deleted Date</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Button Url</th>
+                        <th>Image</th>
+                        <th>Created Date</th>
+                        <th>Modified Date</th>
+                        <th>Deleted Date</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td><span style="position: relative; top: 18px;">@Model.Id</span></td>
+                        <td><span style="position: relative; top: 28px;">@Model.Title</span></td>
+                        <td><span style="position: relative; top: 28px;">@Model.ButtonUrl</span></td>
+                        <td><img src="~/upload/sliderItems/@Model.ImageUrl" style="width: 80px; height: 80px;border-radius: 30px; position: relative; left: 18px;"></td>
+                        <td><span style="position: relative; top: 28px;">@Model.CreatedDate</span></td>
+                        <td><span style="position: relative; top: 28px;">@Model.ModifiedDate</span></td>
+                        <td><span style="position: relative; top: 28px;">@Model.DeletedDate</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- /.container-fluid -->

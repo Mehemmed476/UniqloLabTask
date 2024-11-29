@@ -1,0 +1,15 @@
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\bin\Debug\net8.0\Uniqlo.BL.deps.json
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\bin\Debug\net8.0\Uniqlo.BL.dll
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\bin\Debug\net8.0\Uniqlo.BL.pdb
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\bin\Debug\net8.0\Uniqlo.DAL.dll
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\bin\Debug\net8.0\Uniqlo.DAL.pdb
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\Uniqlo.BL.csproj.AssemblyReference.cache
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\Uniqlo.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\Uniqlo.BL.AssemblyInfoInputs.cache
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\Uniqlo.BL.AssemblyInfo.cs
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\Uniqlo.BL.csproj.CoreCompileInputs.cache
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\Uniqlo.BL.csproj.Up2Date
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\Uniqlo.BL.dll
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\refint\Uniqlo.BL.dll
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\Uniqlo.BL.pdb
+C:\Users\II Novbe\source\repos\Uniqlo\Uniqlo.BL\obj\Debug\net8.0\ref\Uniqlo.BL.dll

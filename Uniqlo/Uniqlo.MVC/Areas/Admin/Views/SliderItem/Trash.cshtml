@@ -1,0 +1,47 @@
+﻿@using Uniqlo.DAL.Models
+@model List<SliderItem>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary"> Services <span class="float-right"><a type="button" class="btn btn-success" asp-area="Admin" asp-controller="SliderItem" asp-action="Index">Active Works</a></span></h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Button Url</th>
+                        <th>Image</th>
+                        <th>Configures</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Button Url</th>
+                        <th>Image</th>
+                        <th>Configures</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (SliderItem item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id<a type="button" class="btn btn-secondary" style="position: relative; top: 18px; left: 15px;" asp-area="Admin" asp-action="Details" asp-controller="OurService" asp-route-Id="@item.Id"><i class="fa-solid fa-circle-info"></i></a></td>
+                            <td>@item.Title</td>
+                            <td>@item.ButtonUrl</td>
+                            <td><img src="~/upload/sliderItem/@item.ImageUrl" style="width: 50px"></td>
+                            <td><a type="button" class="btn btn-light mt-2 ml-5 mr-3" asp-area="Admin" asp-action="Restore" asp-controller="SliderItem" asp-route-Id="@item.Id"><i class="fa-solid fa-rotate-left"></i></a> <a type="button" class="btn btn-danger mt-2" asp-area="Admin" asp-action="Delete" asp-controller="SliderItem" asp-route-Id="@item.Id"><i class="fa-solid fa-delete-left"></i></a></td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- /.container-fluid -->
