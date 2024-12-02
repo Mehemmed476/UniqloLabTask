@@ -1,0 +1,64 @@
+﻿@using Uniqlo.DAL.Models
+@model List<Product>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Products (Trash)
+            <span class="float-right">
+                <a type="button" class="btn btn-success" asp-area="Admin" asp-controller="Product" asp-action="Index">Active Products</a>
+            </span>
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Created Date</th>
+                        <th>Modified Date</th>
+                        <th>Configures</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Created Date</th>
+                        <th>Modified Date</th>
+                        <th>Configures</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (Product product in Model)
+                    {
+                        <tr>
+                            <td>
+                                @product.Id
+                                <a type="button" class="btn btn-secondary" style="position: relative; top: 18px; left: 15px;" asp-area="Admin" asp-action="Details" asp-controller="Product" asp-route-Id="@product.Id"><i class="fa-solid fa-circle-info"></i></a>
+                            </td>
+                            <td>@product.Title</td>
+                            <td>@product.Category?.Title</td>
+                            <td>@product.Price</td>
+                            <td>@product.CreatedDate</td>
+                            <td>@product.ModifiedDate</td>
+                            <td>
+                                <a type="button" class="btn btn-light mt-2 ml-5 mr-3" asp-area="Admin" asp-action="Restore" asp-controller="Product" asp-route-Id="@product.Id"><i class="fa-solid fa-rotate-left"></i></a>
+                                <a type="button" class="btn btn-danger mt-2" asp-area="Admin" asp-action="Delete" asp-controller="Product" asp-route-Id="@product.Id"><i class="fa-solid fa-delete-left"></i></a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- /.container-fluid -->

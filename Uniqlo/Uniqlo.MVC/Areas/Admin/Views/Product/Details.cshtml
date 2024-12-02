@@ -1,0 +1,73 @@
+﻿@using Uniqlo.DAL.Models
+@model Product
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            <span style="font-size: 2em;">Product - Details</span>
+            <span class="float-right">
+                <a type="button" class="btn btn-outline-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">
+                    <i class="fa-solid fa-circle-arrow-left"></i> Go Back
+                </a>
+            </span>
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive" style="position: relative; left: 100px;">
+            <table class="table table-bordered" style="width: 85%;" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Image</th>
+                        <th>Created Date</th>
+                        <th>Modified Date</th>
+                        <th>Deleted Date</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Image</th>
+                        <th>Created Date</th>
+                        <th>Modified Date</th>
+                        <th>Deleted Date</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td><span style="position: relative; top: 18px;">@Model.Id</span></td>
+                        <td><span style="position: relative; top: 28px;">@Model.Title</span></td>
+                        <td><span style="position: relative; top: 28px;">@Model.Price</span></td>
+                        <td>
+                            <span style="position: relative; top: 28px;">
+                                @Model.Category?.Title ?? "No Category"
+                            </span>
+                        </td>
+                        <td>
+                            <span style="position: relative; top: 28px;">
+                                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                                {
+                                    <img src="~/upload/products/@Model.ImageUrl" alt="@Model.Title" style="width: 100px; height: 100px; object-fit: cover;" />
+                                }
+                                else
+                                {
+                                    <span>No Image</span>
+                                }
+                            </span>
+                        </td>
+                        <td><span style="position: relative; top: 28px;">@Model.CreatedDate</span></td>
+                        <td><span style="position: relative; top: 28px;">@Model.ModifiedDate</span></td>
+                        <td><span style="position: relative; top: 28px;">@Model.DeletedDate</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

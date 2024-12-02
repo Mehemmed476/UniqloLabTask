@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\images\about\" />
     <Folder Include="wwwroot\images\payment\" />
+    <Folder Include="wwwroot\upload\products\" />
     <Folder Include="wwwroot\upload\sliderItems\" />
   </ItemGroup>
 
